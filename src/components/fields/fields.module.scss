@@ -1,0 +1,67 @@
+.filedTitle {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.boxField {
+    margin-bottom: 20px;
+    > input {
+      width: 100%;
+      height: 32px;
+      border: 1px solid var(--border-color-main);
+      padding: 0 10px;
+      border-radius: 4px;
+      transition: all 0.3s;
+      font-size: 12px;
+      &:focus {
+          outline: none;
+          border-color: var(--border-color-focus);
+      }
+    }
+  }
+.fieldDescription {
+    > textarea {
+        height: 125px;
+        width: 100%;
+        padding: 10px;
+        font-family: var(--font-default);
+        font-size: 12px;
+        &:focus {
+            outline: none;
+            border-color: var(--border-color-focus);
+        }
+    }
+}
+.fieldDueDate {
+    float: left;
+    width: calc(50% - 15px);
+    margin-right: 15px;
+    > input {
+        border-radius: 0;
+    }
+}
+.fieldPiority {
+    float: right;
+    width: calc(50% - 15px);
+    margin-left: 15px;
+    > select {
+        border-radius: 0;
+        width: 100%;
+        height: 32px;
+        border: 1px solid var(--border-color-main);
+        padding: 0 10px;
+        transition: all 0.3s;
+        font-size: 12px;
+    }
+}
+.fieldStatus {
+    > select {
+        border-radius: 0;
+        width: 100%;
+        height: 32px;
+        border: 1px solid var(--border-color-main);
+        padding: 0 10px;
+        transition: all 0.3s;
+        font-size: 12px;
+    }
+}
