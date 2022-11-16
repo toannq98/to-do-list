@@ -26,13 +26,13 @@ function Todos() {
         localStorage.removeItem('listTodo');
     }
     const handleDetailContent = (todo) => {
+        setTodoSelect(todo);
         if(!JSON.stringify(currentsTodo).includes(JSON.stringify(todo))) {
             setCurrentsTodo([...currentsTodo, todo]);
-            setTodoSelect(todo);
         }
     }
     const handleUpdateTodos = (todo) => {
-        const todoCurrent = currentsTodo.find(item => item.id === todo.id);
+        const todoCurrent = todos.find(item => item.id === todo.id);
         
         if (todoCurrent) {
             const index = todos.findIndex(todo => todo.id === todoCurrent.id);
@@ -45,6 +45,7 @@ function Todos() {
                 status: toDoContext.status
             };
             todos[index] = todoUpdate;
+            localStorage.setItem('listTodo', JSON.stringify([...todos]));
             setTodos([...todos]);
         }
     }
@@ -71,7 +72,7 @@ function Todos() {
             setTodoUpdate();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentsTodo]);
+    }, [currentsTodo, todoSelect]);
     if (todos) {
         todosSort = [...todos].filter(todo => todo.name.includes(textSearch));
     }

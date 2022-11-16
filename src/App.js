@@ -43,6 +43,7 @@ function App() {
         <h2 className="main-title">New Task</h2>
         <div className="main-content">
           <Name
+            type="new"
             taskName={toDoContext.taskName}
             setTaskName={toDoContext.setTaskName}
           />

@@ -92,6 +92,7 @@ function TodoItem({
                     style={{maxHeight: `${showContent !== '' ? heightContent : '0'}`}}
                 >
                     <Name
+                        type="list"
                         taskName={toDoContext.taskNameUpdate}
                         setTaskName={toDoContext.setTaskNameUpdate}
                     />
